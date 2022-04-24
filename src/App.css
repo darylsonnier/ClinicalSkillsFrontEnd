@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  /*min-height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body{
+  background-color: #282c34;
+}
+
+.table{
+  width: 75%;
+  margin: auto;
+}
+
+th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  text-align: left;
+  background-color: blue;
+  color: white
+}
+
+td{
+  padding-left: 8px;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd){
+  background-color: #f2e2e2;
+}
+
+tr:hover{
+  background-color: #ddd;
+}
+
+table tr:hover:nth-child(even) {
+  background-color: rgb(69, 103, 153);
+  transition: 0.3s;
+}
+
+table tr:hover:nth-child(odd) {
+  background-color: rgb(36, 151, 61);
+  transition: 0.3s;
+}
+
+.control{
+  height:50px;
+  width:200px;
+}
+
+#top{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 260px;
+  right: 0px;
+  overflow: hidden;
+}
+
+#datatable{
+  position:absolute;
+  top: 260px;
+  left:0px; 
+  right:0px; 
+  overflow:auto;
+}
+
+@media screen and (max-width: 600px) {
+  #top{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 160px;
+    right: 0px;
+    overflow: hidden;
+  }
+  
+  #datatable{
+    position:absolute;
+    top: 160px;
+    left:0px; 
+    right:0px; 
+    overflow:auto;
+  }
+
+  .user {
+    display: inline;
+  }
+  
+  .buttons {
+    display: inline-flexbox;
+    margin: auto;
+  }
+
+  .control{
+    height:35px;
+    width:100px;
+  }
+
+  .table{
+    width: 100%;
+    margin: auto;
+    font-size: smaller;
+  }
+}
