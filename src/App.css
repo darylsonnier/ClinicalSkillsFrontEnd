@@ -22,16 +22,16 @@
   color: #61dafb;
 }
 
-body{
+body {
   background-color: #282c34;
 }
 
-.table{
+.table {
   width: 75%;
   margin: auto;
 }
 
-th{
+th {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 8px;
@@ -40,19 +40,20 @@ th{
   color: white
 }
 
-td{
+td {
   padding-left: 8px;
+  text-align: left;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd) {
   background-color: #f2e2e2;
 }
 
-tr:hover{
+tr:hover {
   background-color: #ddd;
 }
 
@@ -66,12 +67,12 @@ table tr:hover:nth-child(odd) {
   transition: 0.3s;
 }
 
-.control{
+.control {
   height:50px;
   width:200px;
 }
 
-#top{
+#top {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -80,16 +81,26 @@ table tr:hover:nth-child(odd) {
   overflow: hidden;
 }
 
-#datatable{
+#signoffs {
+  position:relative;
+  top: 140px;
+  color: white;
+  margin: auto;
+  width: 75%;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+#datatable {
   position:absolute;
-  top: 260px;
+  top: 285px;
   left:0px; 
   right:0px; 
   overflow:auto;
 }
 
 @media screen and (max-width: 600px) {
-  #top{
+  #top {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -98,7 +109,7 @@ table tr:hover:nth-child(odd) {
     overflow: hidden;
   }
   
-  #datatable{
+  #datatable {
     position:absolute;
     top: 160px;
     left:0px; 
@@ -115,12 +126,12 @@ table tr:hover:nth-child(odd) {
     margin: auto;
   }
 
-  .control{
+  .control {
     height:35px;
     width:100px;
   }
 
-  .table{
+  .table {
     width: 100%;
     margin: auto;
     font-size: smaller;

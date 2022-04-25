@@ -1,4 +1,4 @@
-import { refreshToken } from './refreshToken';
+//import { refreshToken } from './refreshToken';
 async function signin(){
   let email = document.getElementById('email');
   let password = document.getElementById('password');
@@ -17,7 +17,7 @@ async function signin(){
   }).catch(err => {
     console.error('Error:' , err)
   });
-  window.interval = setInterval(refreshToken, 280000);
+//  window.interval = setInterval(refreshToken, 280000);
 }
 
 export default signin;

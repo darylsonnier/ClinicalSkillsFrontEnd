@@ -3,7 +3,7 @@ import { getCookie } from "./getCookie";
 function DisplaySignoffs(data){
     var role = getCookie('role');
     var table;
-    if (role == 'student') {
+    if (role === 'student') {
         table = `<table id='skilltable' class='table striped-table'>
         <thead>
         <th>ID</th>
@@ -29,7 +29,7 @@ function DisplaySignoffs(data){
         }
     }
 
-    if (role == 'instructor') {
+    if (role === 'instructor') {
         table = `<table id='skilltable' class='table striped-table'>
         <thead>
         <th>ID</th>
@@ -43,9 +43,9 @@ function DisplaySignoffs(data){
         <th>Group</th>
         </thead>
         <tbody>`;
-        for (var i=0; i<data.length; i++){
+        for (i=0; i<data.length; i++){
             table += "<tr>";
-            var it = data[i];
+            it = data[i];
             table += "<td>" + it.Id + "</td>";
             table += "<td>" + it.Signofftype + "</td>";
             table += "<td>" + it.Signoffdate + "</td>";
