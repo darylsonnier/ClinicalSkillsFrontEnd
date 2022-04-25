@@ -2,10 +2,10 @@ const URL = "https://demoschool.edu:9000/refreshtoken";
 
 export async function refreshToken(){
     const response = await fetch(URL, {
-        method: 'Get',
+        method: 'Post',
         mode: 'cors',
         credentials: 'include',
     })
-    let retvalue = await response.status;
-    return retvalue;
+    console.log(response.statusText);
+    return;
 };
