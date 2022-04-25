@@ -3,10 +3,6 @@ async function signoffStudent() {
     let skid = document.getElementById('skillselect');
     let stype = document.getElementById('typeselect');
 
-    console.log(sid.value);
-    console.log(skid.value);
-    console.log(stype.value);
-
     fetch("https://demoschool.edu:9000/signoffstudent", {
         method: 'POST',
         headers: new Headers({

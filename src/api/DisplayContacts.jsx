@@ -1,8 +1,9 @@
-function DisplayStudents(data){
+function DisplayContacts(data){
   var table;
   table = `<table id='skilltable' class='table striped-table'>
     <thead>
     <th>ID</th>
+    <th>Role</th>
     <th>Last Name</th>
     <th>First Name</th>
     <th>Email</th>
@@ -13,6 +14,7 @@ function DisplayStudents(data){
     table += "<tr>";
     var it = data[i];
     table += "<td>" + it.Id + "</td>";
+    table += "<td>" + it.Userrole + "</td>";
     table += "<td>" + it.Lastname + "</td>";
     table += "<td>" + it.Firstname + "</td>";
     table += "<td>" + it.Email + "</td>";
@@ -23,4 +25,4 @@ function DisplayStudents(data){
   const datatable = document.getElementById('datatable');
   datatable.innerHTML = table;
 }
-export default DisplayStudents;
+export default DisplayContacts;

@@ -29,7 +29,7 @@ function DisplaySignoffs(data){
         }
     }
 
-    if (role === 'instructor') {
+    if (role === 'instructor' || role ==='admin') {
         table = `<table id='skilltable' class='table striped-table'>
         <thead>
         <th>ID</th>

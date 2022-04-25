@@ -10,21 +10,14 @@ import { fetchData } from './api/fetchData';
 
 import DisplayGroups from './api/DisplayGroups';
 import DisplaySkills from './api/DisplaySkills';
-import DisplayStudents from './api/DisplayStudents';
 import DisplaySignoffs from './api/DisplaySignoffs';
+import DisplayContacts from './api/DisplayContacts';
 
 function App() {
 
   const login = async (e) => {
     document.getElementById('signoffs').innerHTML='';
     document.getElementById('datatable').innerHTML='';
-    var role = getCookie('role');
-    if (role === 'student') {
-      document.getElementById('students').disabled = true;
-    }
-    if (role === 'instructor' || role === 'admin') {
-      document.getElementById('students').disabled = false;
-    }
     signin();
   }
 
@@ -40,13 +33,10 @@ function App() {
     DisplaySkills(data);
   }
 
-  const getStudents = async (e) => {
+  const getContacts = async (e) => {
     document.getElementById('signoffs').innerHTML='';
-    var role = getCookie('role');
-    if (role === 'instructor' || role === 'admin'){
-      const data = await fetchData('getstudents');
-      DisplayStudents(data);
-    }
+    const data = await fetchData('getcontacts');
+    DisplayContacts(data);
   }
 
   const getSignoffs = async (e) => {
@@ -54,7 +44,7 @@ function App() {
     DisplaySignoffs(data);
     document.getElementById('signoffs').innerHTML='';
     var role = getCookie('role');
-    if (role === 'instructor' || role === 'admin') {   
+    if (role === 'instructor') {   
       const skills = await fetchData('getskills');
       const students = await fetchData('getstudents');
 
@@ -130,7 +120,7 @@ function App() {
                 <input type='button' className='skills control'   onClick={getSkills}   value='Skills' />
                 <input type='button' className='groups control'   onClick={getGroups}   value='Groups' />
                 <input type='button' className='signoffs control' onClick={getSignoffs} value='Signoffs' />
-                <input type='button' className='students control' onClick={getStudents} value='Students' id='students' />
+                <input type='button' className='contacts control' onClick={getContacts} value='Contacts' />
               </form>
             </header>
           </div>
