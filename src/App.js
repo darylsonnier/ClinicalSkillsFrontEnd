@@ -4,6 +4,7 @@ import './App.css';
 import signin from './api/signin';
 import logout from './api/signout';
 import signoffStudent from './api/SignoffStudent';
+import exportCSV from './api/ExportCSV';
 
 import { getCookie } from "./api/getCookie";
 import { fetchData } from './api/fetchData';
@@ -100,6 +101,11 @@ function App() {
       submitsignoff.value = 'Signoff Student';
       document.getElementById('signoffs').appendChild(submitsignoff);
     }
+    var csv = document.createElement('input');
+    csv.type = 'button';
+    csv.onclick = exportCSV;
+    csv.value = 'Export';
+    document.getElementById('signoffs').appendChild(csv);    
   }
 
   return (

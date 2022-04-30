@@ -86,9 +86,10 @@ table tr:hover:nth-child(odd) {
   top: 140px;
   color: white;
   margin: auto;
-  width: 75%;
-  box-sizing: border-box;
-  padding-right: 10px;
+  width: 60%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
 }
 
 #datatable {
@@ -103,18 +104,29 @@ table tr:hover:nth-child(odd) {
   #top {
     position: absolute;
     top: 0px;
-    left: 0px;
-    height: 160px;
-    right: 0px;
+    left: 10%;
+    right: 10%;
+    margin: auto;
     overflow: hidden;
+  }
+
+  #signoffs {
+    position:absolute;
+    top: 130px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    left: 2.5%;
+    width: 100%
   }
   
   #datatable {
     position:absolute;
-    top: 160px;
+    top: 220px;
     left:0px; 
     right:0px; 
     overflow:auto;
+    width: 100%;
   }
 
   .user {
